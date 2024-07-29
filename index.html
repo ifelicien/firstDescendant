@@ -10,24 +10,19 @@
   </head>
   <body>
     <header>
+      <ul id="menuBar">
+        <li><a href="">Descendant</a></li>
+        <li><a href="">Weapon</a></li>
+        <li><a href="">Module</a></li>
+        <li><a href="">Reactor</a></li>
+      </ul>
       <h1>Descendants Arsenal</h1>
       <h2>The First Descendents character and gear tool</h2>
     </header>
     <div id="search">
-      <label for="Search Type">Search</label>
-      <select name="features" id="features">
-        <option value="feat1">Player ID</option>
-        <option value="feat2">Basic Information</option>
-        <option value="feat3">Descendant</option>
-        <option value="feat4">Weapon</option>
-        <option value="feat5">Reactor</option>
-        <option value="feat6">External Component</option>
-      </select>
-
-      <!-- <label for="charName">Search </label> -->
+      <label for="Search Type">Search Descendant</label>
       <input type="text" id="userData" />
-
-      <button id="button" onclick="fetchData()">submit</button>
+      <button id="button" onclick="searchDescendantByName()">submit</button>
     </div>
 
     <footer>Data based on NEXON Open API</footer>
