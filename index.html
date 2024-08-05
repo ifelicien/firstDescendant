@@ -4,19 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js">
-      defer
-    </script>
+    <script src="./script.js" defer></script>
+    <script src="./hamburgerMenu.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="22px"
+            viewBox="0 -960 960 960"
+            width="22px"
+            fill="#e8eaed"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+        </li>
+        <li><a href="#">Descendant</a></li>
+        <li><a href="#">Weapon</a></li>
+        <li><a href="#">Module</a></li>
+        <li><a href="#">Reactor</a></li>
+      </ul>
       <ul>
         <li>Descendants Arsenal</li>
-        <li><a href="">Descendant</a></li>
-        <li><a href="">Weapon</a></li>
-        <li><a href="">Module</a></li>
-        <li><a href="">Reactor</a></li>
+        <li class="hideOnMobile"><a href="#">Descendant</a></li>
+        <li class="hideOnMobile"><a href="#">Weapon</a></li>
+        <li class="hideOnMobile"><a href="#">Module</a></li>
+        <li class="hideOnMobile"><a href="#">Reactor</a></li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="22px"
+              viewBox="0 -960 960 960"
+              width="22px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              />
+            </svg>
+          </a>
+        </li>
       </ul>
     </nav>
     <header>
@@ -24,7 +57,7 @@
     </header>
     <div id="search">
       <!-- <label for="Search Type">Search Descendant</label> -->
-      <input type="text" id="userData" value="Search Descendant"/>
+      <input type="text" id="userData" placeholder="Search" />
       <button id="button" onclick="searchDescendantByName()">submit</button>
     </div>
 
