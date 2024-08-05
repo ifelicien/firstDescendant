@@ -5,6 +5,11 @@
 
 body {
   min-height: 100vh;
+  background-color: rgb(56, 56, 56);
+}
+.body-container {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* menubar */
@@ -59,11 +64,11 @@ nav li a:hover {
   justify-content: flex-start;
 }
 
-.sidebar li{
+.sidebar li {
   width: 100%;
 }
 
-.sidebar a{
+.sidebar a {
   color: black;
   width: 100%;
 }
@@ -72,13 +77,48 @@ nav li a:hover {
   display: none;
 }
 
-/* header */
+/* header and search bar*/
+header {
+  display: flex;
+  flex-direction: column;
+  background: url(./assets/1x.webp) no-repeat center;
+  background-size: cover;
+  height: 15%;
+}
+
 header h1 {
+  display: flex;
+  justify-content: center;
   font-size: 1.2rem;
-} 
+  color: silver;
+}
+
+#search {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#searchbar {
+}
+
+/* image */
+.image {
+}
+
+/* display information */
+#display-info {
+  display: grid;
+  gap: 1.25rem;
+}
+
+/* set form-group as class for each element in the display info */
+/* try: set display: grid; as a property of form-group, adjust gap in display-info  */
+/* https://www.youtube.com/watch?v=JHregeIsjPQ - link to kevin powell video for reference */
 
 /* footer */
-.footer{
+.footer {
   display: flex;
   justify-content: center;
   position: fixed;
@@ -89,7 +129,7 @@ header h1 {
   color: silver;
 }
 
-.footer p{
+.footer p {
   margin: 0;
   margin-top: 5px;
   padding: 0;
@@ -106,19 +146,23 @@ header h1 {
     padding: 15px 20px;
   }
 
-  .hideOnMobile{
-    display:none;
+  .hideOnMobile {
+    display: none;
   }
 
-  .menu-button{
+  .menu-button {
     display: flex;
     /* align-items: flex-end; */
+  }
+
+  .body-container {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 @media (max-width: 400px) {
-  .sidebar{
+  .sidebar {
     width: 100%;
   }
 }
-
